@@ -1,0 +1,24 @@
+.line{
+    background-color: #0045a4;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.text1{
+    font-family:"Kanit", sans-serif;
+    color: white;
+    font-size: large;
+    padding-left: 10px;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr ;
+    margin-left: 8%;
+    margin-right: 8%;
+    column-gap: 10px;
+    row-gap: 30px
+     
+}
+
+
