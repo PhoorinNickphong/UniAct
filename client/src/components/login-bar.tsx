@@ -180,7 +180,7 @@ function LoginAppBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <Button  href={"/sigin"} onClick={handleCloseNavMenu} sx={{ p: 0 }} className="button-login">
+              <Button  href={"/signin"} onClick={handleCloseNavMenu} sx={{ p: 0 }} className="button-login">
                 <div className='login-text'>LOGIN</div>
               </Button>
             </Tooltip>

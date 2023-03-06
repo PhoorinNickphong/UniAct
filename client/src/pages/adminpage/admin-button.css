@@ -1,0 +1,14 @@
+.adminbutton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    background-image: url('../image/adBut.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }

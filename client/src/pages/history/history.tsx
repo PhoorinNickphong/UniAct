@@ -1,5 +1,5 @@
-import "../pages/history.css";
-import ActivityAppBar from "../components/app-bar"
+import "./history.css";
+import ActivityAppBar from "../../components/app-bar"
 function History() {
   return(
    <html>

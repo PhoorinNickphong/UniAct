@@ -2,31 +2,42 @@ import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 
-
-import "../pages/sign.css"
+import "./sign.css"
 
 const initialUser = { email: '', password: '', username: '' };
 
-function Signup() {
+function Signup(){
     const [user, setUser] = useState(initialUser)
     const navigate = useNavigate();
-
+    const url = "http://localhost:1337/api/auth/local/register";
     const handleSignup = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(user);
-        const url = "http://localhost:1337/api/auth/local/register";
+
         try {
-          if (user.email && user.password && user.username) {
+          if (user.email && user.password && user.username) 
+            console.log(url, user)
             const res = await axios.post(url, user)
             console.log(res.data)
-            navigate('/login', { replace: true })
+            navigate('/signin', { replace: true })
         }
-      }catch(err) {
+      catch(err) {
         toast.error("Invalid email or password", {
           hideProgressBar: true
         })
       }}
+
+      
+      //   if (!user.email || !/@(email\.psu\.ac\.th|psu\.ac\.th)$/.test(user.email)) {
+      //     Swal.fire({
+      //       icon: 'error',
+      //       title: 'ข้อมูลผิดพลาด',
+      //       text: 'กรุณากรอกอีเมลล์ PSU',
+      //   });
+      //   return;
+      // }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -55,13 +66,13 @@ function Signup() {
               </div>
               <p className="msg">signup with @psu.ac.th account</p>
               <div className='form'>
-                  <form action="http://localhost:1337/api/auth/local/register" method="post" onSubmit={handleSignup}>
+                  <form action={url} method="post" onSubmit={handleSignup}>
                       <input type="text" placeholder='Usename' name='username' className='text' id='username' onChange={handleChange} required/><br/><br/>
                       <input type="email" placeholder='Email' name='email' className='text' id='email' onChange={handleChange} required/><br/>
                       <input type="password" placeholder='Password' name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
-                      <a href="/signup" className='btn-login' id='do-login'>Sign up</a>
-                      <a href="/sigin" className='forgot'>Login?</a>
+                      <input type="submit" className='btn-login' id='do-login' value="Sign up" />
+                      <a href="/signin" className='loginmai'>Login?</a>
                   </form>
               </div>
           </section>

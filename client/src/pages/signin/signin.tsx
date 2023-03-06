@@ -2,10 +2,10 @@ import { useState} from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
-import { storeUser } from '../helper';
+import { storeUser } from '../../helper';
 
 
-import "../pages/sign.css"
+import "./sign.css"
 
 const initialUser = { identifier: '', password: ''};
 
@@ -67,8 +67,8 @@ function Signin() {
                       <input type="email" placeholder='Email'name='identifier' className='text' id='username' onChange={handleChange} required/><br/>
                       <input type="password" placeholder='Password'name='password' className='password' onChange={handleChange} required/><br/>
                       <br />
-                      <a href="" className='btn-login' id='do-login'>Login</a>
-                      <a href="/signup" className='forgot'>sign up</a>
+                      <input type="submit" className='btn-login' id='do-login' value="Login" />
+                      <a href="/signup" className='signupmai'>sign up</a>
                   </form>
               </div>
           </section>
