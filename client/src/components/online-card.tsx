@@ -8,35 +8,43 @@ import kitjakum from '../Models/kitjakum';
 import Repo from '../Repository/index';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-function ActivityCard() {
+function OnlineCard() {
   const [activityList, setActivityList] = useState<kitjakum[]>([]);
 
   const fetchActivityList = async () => {
     const result = await Repo.userResult.getAll();
     if (result) {
-      setActivityList(result);
+        setActivityList(result);
+    
     }
   };
+
+  const actv = activityList.filter(activity => {
+    const matchingCategories = activity.attributes.catagories.data.some(category => {
+      return category.attributes.title.toLowerCase().includes('ค่ายออนไลน์');
+    });
+    return matchingCategories;
+  });
 
   useEffect(() => {
     fetchActivityList();
   }, []);
   return (<>
-    {activityList.map((activity: kitjakum) => (
+    {actv.map((kitjakum, index) => (
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image={"http://localhost:1337" + activity?.attributes?.image?.data?.attributes?.formats?.thumbnail?.url}
+            image={"http://localhost:1337" + kitjakum?.attributes?.image?.data?.attributes?.formats?.thumbnail?.url}
             alt="activity image"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {activity.attributes.title}
+              {kitjakum.attributes.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {activity.attributes.description.slice(0, 100) + '...'}
+              {kitjakum.attributes.description.slice(0, 100) + '...'}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -50,4 +58,4 @@ function ActivityCard() {
   </>)
 }
 
-export default ActivityCard;
+export default OnlineCard;

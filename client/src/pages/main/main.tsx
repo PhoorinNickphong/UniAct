@@ -1,6 +1,9 @@
 import "./main.css";
 import ActivityCard from "../../components/activity-card";
 import ActivityAppBar from "../../components/app-bar"
+import OnfieldCard from "../../components/onfield-card";
+import OnacademicCard from "../../components/onacademic-card"
+import OnlineCard from "../../components/online-card"
 import ContactCard from "../../components/contactcard/contact-card";
 import ContactCard2 from "../../components/contactcard/contact-card2";
 import ContactCard3 from "../../components/contactcard/contact-card3";
@@ -50,21 +53,21 @@ function MainPage() {
           <h1 id="online camp">ค่ายออนไลน์</h1>
         </div>
         <div className="grid">
-
+          <OnlineCard></OnlineCard>
         </div>
 
         <div className="line">
           <h1 id="field camp">ค่ายลงพื้นที่</h1>
         </div>
         <div className="grid">
-
+        <OnfieldCard></OnfieldCard>
         </div>
 
         <div className="line">
           <h1 id="academic camp">ค่ายวิชาการ</h1>
         </div>
         <div className="grid">
-
+        <OnacademicCard></OnacademicCard>
 
         </div>
         <div className="boxCont">

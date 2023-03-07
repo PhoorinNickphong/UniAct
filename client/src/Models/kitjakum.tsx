@@ -53,7 +53,14 @@ export default interface kitjakum {
             
         },
         catagories: {
-            data: string
+            data: [
+                {
+                    id: number,
+                    attributes: {
+                        title: string,
+                    }
+                }
+            ]
         },
         FirstComeFirstServe: [      
             {
