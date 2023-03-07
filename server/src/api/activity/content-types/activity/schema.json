@@ -42,9 +42,6 @@
     "Number": {
       "type": "integer"
     },
-    "Contact": {
-      "type": "text"
-    },
     "catagories": {
       "type": "relation",
       "relation": "manyToMany",
