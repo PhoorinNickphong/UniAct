@@ -43,35 +43,29 @@ function MainPage() {
         </div>
         <div className="grid">
           <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
+
         </div>
         
         <div className="line">
           <h1 id="online camp">ค่ายออนไลน์</h1>
         </div>
         <div className="grid">
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
+
         </div>
 
         <div className="line">
           <h1 id="field camp">ค่ายลงพื้นที่</h1>
         </div>
         <div className="grid">
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
+
         </div>
 
         <div className="line">
           <h1 id="academic camp">ค่ายวิชาการ</h1>
         </div>
         <div className="grid">
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
-          <ActivityCard></ActivityCard>
+
+
         </div>
         <div className="boxCont">
             <h2 id='contact'>ติดต่อ</h2>

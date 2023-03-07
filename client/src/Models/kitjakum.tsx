@@ -13,8 +13,8 @@ export default interface kitjakum {
         Number: number,
         Contact: string,
         Typeregister: string,
-        coverimage: {
-            data: [
+        image: {
+            data: 
                 {
                     id: number,
                     attributes: {
@@ -50,12 +50,12 @@ export default interface kitjakum {
 
                     }
                 }
-            ]
+            
         },
         catagories: {
             data: string
         },
-        FirstComeFirstServe: [
+        FirstComeFirstServe: [      
             {
                 id: number
             }
