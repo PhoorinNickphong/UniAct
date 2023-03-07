@@ -1,6 +1,7 @@
 import "./main.css";
 import ActivityCard from "../../components/activity-card";
 import ActivityAppBar from "../../components/app-bar"
+import OnfieldCard from "../../components/onfield-card";
 import ContactCard from "../../components/contactcard/contact-card";
 import ContactCard2 from "../../components/contactcard/contact-card2";
 import ContactCard3 from "../../components/contactcard/contact-card3";
@@ -50,7 +51,7 @@ function MainPage() {
           <h1 id="online camp">ค่ายออนไลน์</h1>
         </div>
         <div className="grid">
-
+          <OnfieldCard></OnfieldCard>
         </div>
 
         <div className="line">
