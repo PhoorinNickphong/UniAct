@@ -7,7 +7,7 @@ import kitjakum from "../Models/kitjakum";
 
 const user = userData()
 
-export class ActiRepository implements IRepository <kitjakum> {
+export class ActiRepository implements IRepository<kitjakum> {
     urlPrefix = "http://localhost:1337/api/activities?populate=*"
     token = user.jwt
 
@@ -16,13 +16,19 @@ export class ActiRepository implements IRepository <kitjakum> {
         const data = await resp.json();
         return data.data;
     }
-    async get(id: string): Promise<kitjakum[] | null>{
+    async get(id: string): Promise<kitjakum[] | null> {
         const resp = await fetch(`${this.urlPrefix}&filters[id][$eq]=${id}`);
         const data = await resp.json();
         return data.data
 
     }
-    async delete(id: string): Promise<kitjakum[] | null>{
+    async getById(id: string): Promise<kitjakum | null> {
+        const resp = await fetch(`${this.urlPrefix}&filters[id][$eq]=${id}`);
+        const data = await resp.json();
+        return data.data[0] || null;
+    }
+
+    async delete(id: string): Promise<kitjakum[] | null> {
         const resp = await fetch(`http://localhost:1337/api/activities/${id}`, {
             method: "DELETE",
             headers: {
@@ -33,4 +39,4 @@ export class ActiRepository implements IRepository <kitjakum> {
         const data = await resp.json();
         return data.data
     }
-    }
+}
