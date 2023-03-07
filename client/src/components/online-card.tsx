@@ -36,8 +36,9 @@ function OnlineCard() {
           <CardMedia
             component="img"
             height="140"
-            image={"http://localhost:1337" + kitjakum?.attributes?.image?.data?.attributes?.formats?.thumbnail?.url}
+            image={"http://localhost:1337" + kitjakum?.attributes?.Image?.data[0]?.attributes?.formats?.thumbnail?.url}
             alt="activity image"
+            sx={{ objectFit: 'cover' }}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
