@@ -7,12 +7,22 @@ import '../components/activity-card.css';
 import kitjakum from '../Models/kitjakum';
 import Repo from '../Repository/index';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
+interface Prop {
+  Kitjakam: kitjakum;
+  onUpdatekitjakam: (Kitjakam: kitjakum) => void;
+}
+
+
 
 function ActivityCard() {
   const [activityList, setActivityList] = useState<kitjakum[]>([]);
-
+  const navigate = useNavigate();
+  /* const kitjakam = props.kitjakam; */
   const fetchActivityList = async () => {
     const result = await Repo.userResult.getAll();
+    //console.log(result)
     if (result) {
       setActivityList(result);
     }
@@ -24,7 +34,7 @@ function ActivityCard() {
   return (<>
     {activityList.map((activity: kitjakum) => (
       <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
+        <CardActionArea onClick={() => navigate('/information/${kitjakum.id}')}>
           <CardMedia
             component="img"
             height="140"
