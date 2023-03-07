@@ -7,9 +7,11 @@ import '../components/activity-card.css';
 import kitjakum from '../Models/kitjakum';
 import Repo from '../Repository/index';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function OnacademicCard() {
   const [activityList, setActivityList] = useState<kitjakum[]>([]);
+  const navigate = useNavigate();
 
   const fetchActivityList = async () => {
     const result = await Repo.userResult.getAll();
@@ -31,7 +33,7 @@ function OnacademicCard() {
   }, []);
   return (<>
     {actv.map((kitjakum, index) => (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345 }} onClick={() => navigate(`/information/${kitjakum.id}`)}>
         <CardActionArea>
           <CardMedia
             component="img"
