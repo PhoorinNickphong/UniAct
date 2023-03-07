@@ -3,21 +3,37 @@ import "./information.css";
 import ActivityAppBar from "../../components/app-bar";
 import kitjakum from "../../Models/kitjakum";
 import Repo from "../../Repository/index";
-function Information() {
-  const [activityList, setActivityList] = useState<kitjakum[]>([]);
-  const fetchActivityList = async () => {
-    const result = await Repo.userResult.getAll();
-    if (result) {
-      setActivityList(result);
+import { useNavigate, useParams } from "react-router-dom";
+
+
+
+
+const Information  = () =>  {
+  const [userresult, setUserResult] = useState<kitjakum[]>([]);
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const fetchData = async () => {
+    try {
+      const res = await Repo.userResult.get(id as string);
+      if (res) {
+        
+        setUserResult(res);
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
   useEffect(() => {
-    fetchActivityList();
-  }, []);
+    fetchData();
+  }, [id]);
+
+  const data = userresult.length > 0 ? userresult[0].attributes : null;
+  
+  
+  
   return (
-    <>
-      {activityList.map((activity: kitjakum) => (
         <html>
           <head>
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,7 +61,7 @@ function Information() {
             <div className="box1">
               <h2>รายละเอียด</h2>
             </div>
-            <p className="font">{activity.attributes.description + "..."}</p>
+            <p className="font">{data?.description.toString() }</p>
             <br />
             <div className="box1">
               <h2>กำหนดการ</h2>
@@ -54,22 +70,20 @@ function Information() {
                 ระยะเวลากิจกรรม
             </div>
             <ul>
-              <li className="font">เริ่ม: {activity.attributes.StartActivity}</li>
-              <li className="font">สิ้นสุด: {activity.attributes.EndActivity}</li>
+              <li className="font">เริ่ม: {data?.StartActivity.toString()}</li>
+              <li className="font">สิ้นสุด: {data?.EndActivity.toString()}</li>
             </ul>
             <div className="box60">
                 ระยะเวลาการสมัคร
             </div>
             <ul>
-              <li className="font">เริ่ม: {activity.attributes.StartRegistration}</li>
-              <li className="font">สิ้นสุด: {activity.attributes.EndRegistration}</li>
+              <li className="font">เริ่ม: {data?.StartRegistration}</li>
+              <li className="font">สิ้นสุด: {data?.EndRegistration}</li>
             </ul>
             <br />
           </body>
         </html>
-      ))}
-    </>
-  );
-}
+      )
+  }
 
 export default Information;
