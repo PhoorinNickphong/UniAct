@@ -3,70 +3,65 @@ export default interface kitjakum {
     attributes: {
         title: string,
         description: string,
-        createdAt: string,
-        updatedAt: string,
-        publishedAt: string,
         StartActivity: string,
         EndActivity: string,
         StartRegistration: string,
         EndRegistration: string,
         Number: number,
-        Contact: string,
         Typeregister: string,
-        image: {
-            data: 
+        Image: {
+            data: [
                 {
                     id: number,
                     attributes: {
-                        name: string;
-                        alternativeText: string | null;
-                        caption: string | null;
-                        width: number;
-                        height: number;
+                        name: string,
+                        alternativeText: null,
+                        caption: null,
+                        width: 954,
+                        height: 298,
                         formats: {
                             thumbnail: {
-                                name: string;
-                                hash: string;
-                                ext: string;
-                                mime: string;
-                                path: string | null;
-                                width: number;
-                                height: number;
-                                size: number;
-                                url: string;
-
+                                name: string,
+                                hash: string,
+                                ext: string,
+                                mime: string,
+                                path: null,
+                                width: number,
+                                height: number,
+                                size: number,
+                                url: string
                             },
-                        },
-                        hash: string;
-                        ext: string;
-                        mime: string;
-                        size: number;
-                        url: string;
-                        previewUrl: string | null;
-                        provider: string;
-                        provider_metadata: any | null;
-                        createdAt: string;
-                        updatedAt: string;
 
+                        },
+                        hash: string,
+                        ext: string,
+                        mime: string,
+                        size: number,
+                        url: string,
+                        previewUrl: null,
+                        provider: string,
+                        provider_metadata: null,
+                        createdAt: string,
+                        updatedAt: string
                     }
                 }
-            
+            ]
         },
         catagories: {
             data: [
                 {
-                    id: number,
+                    id: 2,
                     attributes: {
                         title: string,
                     }
                 }
             ]
         },
-        FirstComeFirstServe: [      
+        FirstComeFirstServe: [
             {
-                id: number
+                id: 5
             }
         ],
         Candidate: []
     }
-}   
+}
