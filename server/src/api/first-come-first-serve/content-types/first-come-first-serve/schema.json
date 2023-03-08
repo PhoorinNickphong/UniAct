@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "first_come_first_serves",
+  "info": {
+    "singularName": "first-come-first-serve",
+    "pluralName": "first-come-first-serves",
+    "displayName": "First Come First Serve"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Username": {
+      "type": "string"
+    },
+    "ActivityID": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "candidates",
+  "info": {
+    "singularName": "candidate",
+    "pluralName": "candidates",
+    "displayName": "Candidate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Username": {
+      "type": "string"
+    },
+    "ActivityID": {
+      "type": "string"
+    },
+    "Confirm": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

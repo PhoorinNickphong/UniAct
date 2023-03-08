@@ -54,16 +54,6 @@
         "First Come First Serve",
         "Candidate"
       ]
-    },
-    "FirstComeFirstServe": {
-      "type": "component",
-      "repeatable": true,
-      "component": "typeregister.type1"
-    },
-    "Candidate": {
-      "type": "component",
-      "repeatable": true,
-      "component": "typeregister.type2"
     }
   }
 }
