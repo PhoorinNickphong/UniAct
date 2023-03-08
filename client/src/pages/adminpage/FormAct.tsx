@@ -25,7 +25,7 @@ function FormActAdmin() {
 
             <label>▼ ชื่อกิจกรรม</label>
             <div className="emp2" ></div>
-            <form>
+            <form method="post">
             <TextField
             variant="outlined"
             fullWidth

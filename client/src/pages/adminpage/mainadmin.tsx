@@ -73,7 +73,7 @@ function MainPageadmin() {
           <a className="contact2" href="https://line.me/ti/g2/bRDlz7ZlaK2IC7tNRG9jFT27wpJg5OURTvSGgg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"></a>
           <a className="contact3" href="https://www.instagram.com/psucoe34/"></a>
         </div>
-        <a className="adminbutton" href="#admin"></a>
+        <a className="adminbutton" href="/formact"></a>
         <div  className="box3">
           <h4>• Website for activity</h4>
           <h4>• We love activity</h4>
