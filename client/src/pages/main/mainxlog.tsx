@@ -3,7 +3,7 @@ import ActivityCard from "../../components/activity-card";
 import OnfieldCard from "../../components/onfield-card";
 import OnacademicCard from "../../components/onacademic-card"
 import OnlineCard from "../../components/online-card"
-import LoginAppBar from "../../components/login-bar";
+import ActivityAppBar from "../../components/app-bar";
 import image1 from "../image/websitefor.jpg"
 import image2 from "../image/websitefor2.jpg"
 import image3 from "../image/websitefor3.jpg"
@@ -21,7 +21,7 @@ function MainLog() {
         </link>
       </head>
       <body>
-        <LoginAppBar></LoginAppBar>
+        <ActivityAppBar></ActivityAppBar>
         <div className="emp">
           <p>
             <label>ลงทะเบียนเข้าร่วมกิจกรรม</label>

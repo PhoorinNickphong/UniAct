@@ -17,11 +17,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Link from "@mui/material/Link";
-
+import { useState,useEffect } from 'react';
 
 
 const pages: [string, string][] = [['Home', '/'], ['Status', '/status'], ['Contact', '/contact']]
 const settings: [string, string][] = [['Account',''], ['Logout','/signout']];
+
+const getUserData = () => {
+  const stringfiedUser = localStorage.getItem("user") || "";
+  if (stringfiedUser) {
+    return JSON.parse(stringfiedUser);
+  }
+  return false;
+};
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -70,7 +78,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function ActivityAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
+  const userData = getUserData();
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -86,7 +94,12 @@ function ActivityAppBar() {
     setAnchorElUser(null);
   };
   
-  
+  useEffect(() => {
+    if (!getUserData()) {
+      localStorage.removeItem('userData');
+    }
+  }, [userData]);
+
 
   return (
     <AppBar  position="static" color='inherit' >
@@ -189,7 +202,8 @@ function ActivityAppBar() {
              />
             </Search>
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          {userData && (
+            <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar src="/broken-image.jpg" />
@@ -217,6 +231,16 @@ function ActivityAppBar() {
                 </MenuItem>
               ))}
             </Menu>
+          </Box>
+          )}
+            <Box sx={{ flexGrow: 0 }}>
+          {!userData &&( 
+            <Tooltip title="Open settings">
+            <Button  href={"/signin"} onClick={handleCloseNavMenu} sx={{ p: 0 }} className="button-login">
+                <div className='login-text'>LOGIN</div>
+              </Button>
+            </Tooltip>
+            )}
           </Box>
         </Toolbar>
       </Container>
