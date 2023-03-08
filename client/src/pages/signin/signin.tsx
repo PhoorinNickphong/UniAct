@@ -28,7 +28,7 @@ function Signin() {
               hideProgressBar: true
             })
             setUser(initialUser)
-            navigate('/')
+            navigate('/checkadmin')
           }
     }}catch(err) {
       toast.error("Invalid email or password", {

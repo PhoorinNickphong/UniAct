@@ -1,7 +1,7 @@
 import "./main.css";
 import ActivityCard from "../../components/activity-card";
 import ActivityAppBar from "../../components/app-bar"
-import "./pages/admin-button.css";
+import "../adminpage/admin-button.css";
 import { url } from "inspector";
 
 function MainPageadmin() {
@@ -19,7 +19,7 @@ function MainPageadmin() {
       <ActivityAppBar></ActivityAppBar>
         <div className="emp">
             <p>
-                <label>ลงทะเบียนเข้าร่วมกิจกรรม</label>
+                <label>ลงทะเบียนเข้าร่วมกิจกรรม:ADMIN</label>
             </p>
         </div>
         <div className="box">
