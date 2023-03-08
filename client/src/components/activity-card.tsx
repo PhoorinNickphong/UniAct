@@ -46,7 +46,7 @@ function ActivityCard() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" onClick={() => navigate(`/information/${activity.id}`)}>
             Readmore
           </Button>
         </CardActions>

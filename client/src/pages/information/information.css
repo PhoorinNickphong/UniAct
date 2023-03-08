@@ -22,8 +22,9 @@ header.isOpen{
     margin-bottom: 20px;
 }
 
-div.images{
-    background-color: bisque;
+.images{
+    background-color: rgb(255, 239, 219);
+    width: 100%;
 }
 
 .box1{
@@ -48,4 +49,14 @@ div.images{
 .font{
     font-size: 110%;
     font-family:"Kanit", sans-serif;
+}
+
+.p20{
+    padding: 2%;
+}
+
+.picture{ 
+    padding-left:6% ;
+    width: 80%;  
+    align-items: center;
 }

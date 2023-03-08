@@ -49,17 +49,17 @@ const Information = () => {
           <h1>เปิดรับอยุ่นะจุ๊บๆ</h1>
         </header>
         <div className="images">
-          <img
+          <img className="picture"
             src={thumbnail}
             alt="activity image"
-            style={{ objectFit: 'cover', height: 140 }}
+            /* style={{ objectFit: 'cover', height: 140 }} */
           />
 
         </div>
         <div className="box1">
           <h2>รายละเอียด</h2>
         </div>
-        {data?.description}
+        <p className="font p20">{data?.description}</p>
         <br />
         <div className="box1">
           <h2>กำหนดการ</h2>
