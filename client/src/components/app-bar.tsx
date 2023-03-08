@@ -21,7 +21,7 @@ import Link from "@mui/material/Link";
 
 
 const pages: [string, string][] = [['Home', '/'], ['Status', '/status'], ['Contact', '#contact']]
-const settings: [string, string][] = [['Account',''], ['History','/history'], ['Logout','/']];
+const settings: [string, string][] = [['Account',''], ['Logout','/']];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
