@@ -1,12 +1,6 @@
-import "../adminpage/main.css";
+import "./main.css";
 import ActivityCard from "../../components/activity-card";
 import ActivityAppBar from "../../components/app-bar"
-import ContactCard from "../../components/contactcard/contact-card";
-import ContactCard2 from "../../components/contactcard/contact-card2";
-import ContactCard3 from "../../components/contactcard/contact-card3";
-import ContactCard4 from "../../components/contactcard/contact-card4";
-import ContactCard5 from "../../components/contactcard/contact-card5";
-import ContactCard6 from "../../components/contactcard/contact-card6";
 import "./pages/admin-button.css";
 import { url } from "inspector";
 
@@ -15,6 +9,7 @@ function MainPageadmin() {
     <html>
       <head>
         <link rel="stylesheet" href="main.css"></link>
+        <link rel="stylesheet" href="admin-button.css"></link>
         <link 
         href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"  
         rel="stylesheet">
@@ -73,16 +68,19 @@ function MainPageadmin() {
         <div  className="boxCont2">
             <h2>ช่องทางการติดต่อ</h2>
         </div>
-        <div className="grid">
-          <ContactCard></ContactCard>
-          <ContactCard2></ContactCard2>
-          <ContactCard3></ContactCard3>
-          <ContactCard4></ContactCard4>
-          <ContactCard5></ContactCard5>
-          <ContactCard6></ContactCard6>
+        <div className="grid2">
+          <a className="contact" href="https://www.facebook.com/profile.php?id=100090861491854"></a>
+          <a className="contact2" href="https://line.me/ti/g2/bRDlz7ZlaK2IC7tNRG9jFT27wpJg5OURTvSGgg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"></a>
+          <a className="contact3" href="https://www.instagram.com/psucoe34/"></a>
         </div>
         <a className="adminbutton" href="#admin"></a>
         <div  className="box3">
+          <h4>• Website for activity</h4>
+          <h4>• We love activity</h4>
+          <h4>• เว็บไซต์ที่เป็นศูนย์รวมของกิจกรรม</h4>
+          <h4>• พื้นที่ของคนรักในการทำกิจกรรม</h4>
+          <h4>• มีกิจกรรมและค่ายอื่นๆอีกมายรวมไว้ที่นี่แล้ว</h4>
+          <h4>• UniAct Co. TH</h4>
         </div>
       </body>
     </html>
