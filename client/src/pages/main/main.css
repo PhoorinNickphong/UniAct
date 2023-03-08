@@ -1,7 +1,42 @@
 html{
     scroll-behavior: smooth;
   }
-  
+
+.slide{
+    width: 1000px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.slide figure img{
+    width: 20%;
+    height: 350%;
+    float: left;
+    
+}
+.slide figure{
+    position: relative;
+    width: 500%;
+    margin: 0%;
+    margin-top: 5px;
+    left: 0px;
+    animation: for_slide 20s infinite linear;
+}
+
+@keyframes for_slide{
+    0%{left: 0%;}
+    10%{left: 0%;}
+    20%{left: -100%;}
+    35%{left: -100%;}
+    40%{left: -200%;}
+    60%{left: -200%;}
+    80%{left: -300%;}
+    100%{left: -300%;}
+}
 
 .box0{
     background-color: #ffffff;

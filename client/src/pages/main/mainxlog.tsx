@@ -4,6 +4,9 @@ import OnfieldCard from "../../components/onfield-card";
 import OnacademicCard from "../../components/onacademic-card"
 import OnlineCard from "../../components/online-card"
 import LoginAppBar from "../../components/login-bar";
+import image1 from "../image/websitefor.jpg"
+import image2 from "../image/websitefor2.jpg"
+import image3 from "../image/websitefor3.jpg"
 
 function MainLog() {
 
@@ -23,6 +26,14 @@ function MainLog() {
           <p>
             <label>ลงทะเบียนเข้าร่วมกิจกรรม</label>
           </p>
+        </div>
+        <div className="slide">
+          <figure>
+            <img src={image1}  />
+            <img src={image2}  />
+            <img src={image3}  />
+            <img src={image1}  />
+          </figure>
         </div>
         <div className="box">
           <h2>กิจกรรม</h2>
