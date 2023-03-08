@@ -7,7 +7,7 @@ import ActivityAppBar from "../../components/app-bar";
 import image1 from "../image/websitefor.jpg"
 import image2 from "../image/websitefor2.jpg"
 import image3 from "../image/websitefor3.jpg"
-
+import Footer from "../../components/footer";
 function MainLog() {
 
   
@@ -78,27 +78,7 @@ function MainLog() {
           <OnacademicCard></OnacademicCard>
 
         </div>
-        <div className="boxCont">
-          <h2 id='contact'>ติดต่อ</h2>
-        </div>
-        <div className="boxCont2">
-          <h2>ช่องทางการติดต่อ</h2>
-        </div>
-        <div className="grid2">
-          <a className="contact" href="https://www.facebook.com/profile.php?id=100090861491854"></a>
-          <a className="contact2" href="https://line.me/ti/g2/bRDlz7ZlaK2IC7tNRG9jFT27wpJg5OURTvSGgg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"></a>
-          <a className="contact3" href="https://www.instagram.com/psucoe34/"></a>
-        </div>
-        <div  className="box3">
-          <h4>• Website for activity</h4>
-          <h4>• We love activity</h4>
-          <h4>• เว็บไซต์ที่เป็นศูนย์รวมของกิจกรรม</h4>
-          <h4>• พื้นที่ของคนรักในการทำกิจกรรม</h4>
-          <h4>• มีกิจกรรมและค่ายอื่นๆอีกมายรวมไว้ที่นี่แล้ว</h4>
-          <h4>• UniAct Co. TH</h4>
-        </div>
-        <div className="box3">
-        </div>
+          <Footer/>
       </body>
     </html>
   )

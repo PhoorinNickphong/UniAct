@@ -6,7 +6,7 @@ import ContactCard3 from "../../components/contactcard/contact-card3";
 import ContactCard4 from "../../components/contactcard/contact-card4";
 import ContactCard5 from "../../components/contactcard/contact-card5";
 import ContactCard6 from "../../components/contactcard/contact-card6";
-
+import Footer from "../../components/footer";
 function Contact() {
     return(
      <html>
@@ -30,6 +30,7 @@ function Contact() {
         <div>
           
         </div>
+        <Footer/>
       </body>
      </html>
     )

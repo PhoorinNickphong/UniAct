@@ -1,7 +1,7 @@
 import "./status.css";
 import ActivityAppBar from "../../components/app-bar"
 import StatusCard from "../../components/statuscard";
-
+import Footer from "../../components/footer";
 
 
 function Status() {
@@ -23,8 +23,8 @@ function Status() {
         <StatusCard></StatusCard>
       </div>
       <div>
-        
       </div>
+      <Footer/>
     </body>
    </html>
   )

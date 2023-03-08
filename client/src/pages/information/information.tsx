@@ -5,6 +5,7 @@ import kitjakum from "../../Models/kitjakum";
 import Repo from "../../Repository/index";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import Footer from "../../components/footer";
 
 const getUserData = () => {
   const stringfiedUser = localStorage.getItem("user") || "";
@@ -248,6 +249,7 @@ const Information = () => {
             ลงทะเบียน
           </button>
         </div>
+        <Footer/>  
       </body>
     </html>
   )
