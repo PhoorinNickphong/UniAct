@@ -10,6 +10,7 @@ import Contact from './pages/contact/contact';
 import MainPageadmin from './pages/adminpage/mainadmin'
 import Page from './pages/adminpage/Checkadmin'
 import Signout from './pages/signin/signout'
+import FormActAdmin from './pages/adminpage/FormAct'
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/admin" element={<MainPageadmin />}/>
         <Route path='/checkadmin' element ={<Page/>}/>
         <Route path='/signout' element ={<Signout/>}/>
+        <Route path='/formact' element ={<FormActAdmin/>}/>
 
 
       </Routes>

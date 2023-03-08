@@ -1,4 +1,4 @@
-import "../src/pages/adminpage/main.css";
+import "../adminpage/main.css";
 import ActivityAppBar from "../../../src/components/app-bar"
 import { Button, TextareaAutosize, TextField } from "@mui/material";
 
