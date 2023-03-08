@@ -19,7 +19,7 @@ function MainPageadmin() {
       <ActivityAppBar></ActivityAppBar>
         <div className="emp">
             <p>
-                <label>ลงทะเบียนเข้าร่วมกิจกรรม:ADMIN</label>
+                <label>หน้าผู้ดูแลระบบ</label>
             </p>
         </div>
         <div className="box">

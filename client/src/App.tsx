@@ -8,7 +8,7 @@ import Signup from './pages/signup/signup';
 import Information from './pages/information/information';
 import Contact from './pages/contact/contact';
 import MainPageadmin from './pages/adminpage/mainadmin'
-import Page from './pages/adminpage/Checkadmin'
+import Page from './pages/adminpage/Checkpls'
 import Signout from './pages/signin/signout'
 import FormActAdmin from './pages/adminpage/FormAct'
 

@@ -60,9 +60,7 @@ const Page = () => {
     <div>
       {isAuthorized ? (
         <h1>loading...</h1>
-      ) : (
-        <h1>loading...</h1>
-      )}
+      ) : ("") }
     </div>
   );
 };
