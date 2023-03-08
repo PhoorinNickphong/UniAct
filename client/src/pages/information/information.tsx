@@ -79,6 +79,11 @@ const Information = () => {
           <li className="font">สิ้นสุด: {data?.EndRegistration}</li>
         </ul>
         <br />
+        <div className="box56">
+        <button className="Button20 font" type="submit">
+          ลงทะเบียน
+        </button>
+        </div>
       </body>
     </html>
   )

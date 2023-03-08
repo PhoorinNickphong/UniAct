@@ -60,3 +60,19 @@ header.isOpen{
     width: 80%;  
     align-items: center;
 }
+
+.box56{
+    position: relative;
+}
+.Button20{
+    background-color: #0045A4;
+    color: #ffffff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    right: 50px;
+  
+}
