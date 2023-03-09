@@ -44,8 +44,6 @@ const Information = () => {
     }
   };
 
-
-
   async function SignupClick(id: string) {
     const activity = {
       data: {
@@ -72,7 +70,7 @@ const Information = () => {
         if (result.isConfirmed) {
           try {
             const resp = await fetch(
-              `http://localhost:1337/api/activity/${id}/like`,
+              `http://localhost:1337/api/activity`,
               {
                 method: "GET",
                 headers: {
@@ -81,6 +79,7 @@ const Information = () => {
                 },
               }
             );
+
             const data = await resp.json();
             console.log(data);
             const response = await fetch(
@@ -104,6 +103,7 @@ const Information = () => {
               icon: "success",
               confirmButtonText: "OK",
             });
+
             setIsRegis(true);
           } catch (err) {
             console.error(err);
@@ -119,6 +119,7 @@ const Information = () => {
           navigate("/signin");
         });
       }
+
     } else {
       if (userData) {
         const result = await Swal.fire({
@@ -135,7 +136,7 @@ const Information = () => {
         if (result.isConfirmed) {
           try {
             const resp = await fetch(
-              `http://localhost:1337/api/activity/${id}/like`,
+              `http://localhost:1337/api/activity`,
               {
                 method: "GET",
                 headers: {
@@ -144,6 +145,7 @@ const Information = () => {
                 },
               }
             );
+
             const data = await resp.json();
             console.log(data);
             const response = await fetch(
@@ -167,6 +169,7 @@ const Information = () => {
               icon: "success",
               confirmButtonText: "OK",
             });
+
             setIsRegis(true);
           } catch (err) {
             console.error(err);
@@ -179,9 +182,10 @@ const Information = () => {
           icon: "error",
           confirmButtonText: "OK",
         }).then(() => {
-          navigate("/login");
+          navigate("/signin");
         });
       }
+      
     }
   }
 
