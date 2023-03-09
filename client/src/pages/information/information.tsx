@@ -6,6 +6,7 @@ import Repo from "../../Repository/index";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import Footer from "../../components/footer";
+import conf from '../../conf'
 
 const getUserData = () => {
   const stringfiedUser = localStorage.getItem("user") || "";
@@ -22,7 +23,7 @@ const Information = () => {
   const params = useParams();
   const userData = getUserData();
   const data = userresult.length > 0 ? userresult[0].attributes : null;
-  const thumbnail = `http://localhost:1337${data?.Image.data[0].attributes.url}`;
+  const thumbnail = `${conf.apiPrefix}${data?.Image.data[0].attributes.url}`;
 
 
   const fetchData = async () => {
@@ -62,7 +63,7 @@ const Information = () => {
         if (result.isConfirmed) {
           try {
             const resp = await fetch(
-              `http://localhost:1337/api/activity`,
+              `${conf.apiPrefix}/api/activity`,
               {
                 method: "GET",
                 headers: {
@@ -75,7 +76,7 @@ const Information = () => {
             const data = await resp.json();
             console.log(data);
             const response = await fetch(
-              "http://localhost:1337/api/first-come-first-serves",
+              `${conf.apiPrefix}/api/first-come-first-serves`,
               {
                 method: "POST",
                 headers: {
@@ -128,7 +129,7 @@ const Information = () => {
         if (result.isConfirmed) {
           try {
             const resp = await fetch(
-              `http://localhost:1337/api/activity`,
+              `${conf.apiPrefix}/api/activity`,
               {
                 method: "GET",
                 headers: {
@@ -141,7 +142,7 @@ const Information = () => {
             const data = await resp.json();
             console.log(data);
             const response = await fetch(
-              "http://localhost:1337/api/candidates",
+              `${conf.apiPrefix}/api/candidates`,
               {
                 method: "POST",
                 headers: {

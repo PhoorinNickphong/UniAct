@@ -7,6 +7,7 @@ import '../components/activity-card.css';
 import kitjakum from '../Models/kitjakum';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import conf from '../conf'
 
 
 const getUserData = () => {
@@ -26,7 +27,7 @@ function StatusCard() {
   const fetchData = async () => {
     try {
       const data = await fetch(
-        `http://localhost:1337/api/activities?populate=*`
+        `${conf.apiPrefix}}/api/activities?populate=*`
       );
       if (data) {
         const data1 = await data.json();
@@ -47,7 +48,7 @@ function StatusCard() {
           <CardMedia
             component="img"
             height="140"
-            image={"http://localhost:1337" + kitjakum?.attributes?.Image?.data[0]?.attributes?.formats?.thumbnail?.url}
+            image={conf.apiPrefix + kitjakum?.attributes?.Image?.data[0]?.attributes?.formats?.thumbnail?.url}
             alt="activity image"
             sx={{ objectFit: 'cover' }}
           />

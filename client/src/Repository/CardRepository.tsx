@@ -2,11 +2,12 @@
 import { IRepository } from "./IRepository";
 import { userData } from "../helper";
 import kitjakum from "../Models/kitjakum";
+import conf from '../conf'
 
 const user = userData()
 
 export class ActiRepository implements IRepository<kitjakum> {
-    urlPrefix = "http://localhost:1337/api/activities?populate=*"
+    urlPrefix = `${conf.apiPrefix}/api/activities?populate=*`
     token = user.jwt
 
     async getAll(): Promise<kitjakum[] | null> {
@@ -27,7 +28,7 @@ export class ActiRepository implements IRepository<kitjakum> {
     }
 
     async delete(id: string): Promise<kitjakum[] | null> {
-        const resp = await fetch(`http://localhost:1337/api/activities/${id}`, {
+        const resp = await fetch(`${conf.apiPrefix}/api/activities/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

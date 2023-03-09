@@ -8,6 +8,7 @@ import kitjakum from '../Models/kitjakum';
 import Repo from '../Repository/index';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import conf from '../conf'
 
 
 function ActivityCard() {
@@ -32,7 +33,7 @@ function ActivityCard() {
           <CardMedia
             component="img"
             height="140"
-            image={"http://localhost:1337" + activity?.attributes?.Image?.data[0]?.attributes?.formats?.thumbnail?.url}
+            image={conf.apiPrefix + activity?.attributes?.Image?.data[0]?.attributes?.formats?.thumbnail?.url}
             alt="activity image"
             sx={{ objectFit: 'cover' }}
           />

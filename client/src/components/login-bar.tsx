@@ -18,6 +18,7 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Link from "@mui/material/Link";
 
+
 const pages: [string, string][] = [['Home', '/'], ['Contact', '#contact']]
 
 

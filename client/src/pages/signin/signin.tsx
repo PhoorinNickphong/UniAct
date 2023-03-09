@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
 import { storeUser } from '../../helper';
 import logo from "../image/logo2.png"
+import conf from '../../conf'
 
 import "./sign.css"
 
@@ -13,11 +14,12 @@ const initialUser = { identifier: '', password: ''};
 function Signin() {
     const [user, setUser] = useState(initialUser)
     const navigate = useNavigate();
+    const apiPrefix = `${conf.apiPrefix}/api/auth/local`
 
     const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
       console.log(user);
-      const url = "http://localhost:1337/api/auth/local"
+      const url = `${conf.apiPrefix}/api/auth/local`
       try {
         if (user.identifier && user.password) {
           const {data} = await axios.post(url, user)
@@ -64,7 +66,7 @@ function Signin() {
               </div>
               <p className="msg">signin with @psu.ac.th account</p>
               <div className='form'>
-                  <form action="http://localhost:1337/api/auth/local" method="post" onSubmit={handleLogin}>
+                  <form action={apiPrefix} method="post" onSubmit={handleLogin}>
                       <input type="email" placeholder='Email'name='identifier' className='text' id='username' onChange={handleChange} required/><br/>
                       <input type="password" placeholder='Password'name='password' className='password' onChange={handleChange} required/><br/>
                       <br />

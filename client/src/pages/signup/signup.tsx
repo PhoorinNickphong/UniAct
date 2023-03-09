@@ -5,13 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import logo from "../image/logo2.png"
 import "./sign.css"
+import conf from '../../conf'
 
 const initialUser = { email: '', password: '', username: '' };
 
 function Signup(){
     const [user, setUser] = useState(initialUser)
     const navigate = useNavigate();
-    const url = "http://localhost:1337/api/auth/local/register";
+    const url = `${conf.apiPrefix}/api/auth/local/register`;
     const handleSignup = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(user);
