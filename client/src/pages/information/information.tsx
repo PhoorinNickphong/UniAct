@@ -29,16 +29,9 @@ const Information = () => {
   const fetchData = async () => {
     try {
       const res = await Repo.userResult.getById(params.id as string);
-      const data2 = await fetch(`http://localhost:1337/api/first-come-first-serves?filters[Username]=${userData.username}&filters[ActivityID]=${params.id}`)
-
       if (res) {
         setUserResult([res])
       }
-      if (data2) {
-        const data3 = await data2.json();
-        setActivityResult(data3.data);
-      }
-
     } catch (error) {
       console.log(error)
     }
@@ -165,7 +158,7 @@ const Information = () => {
             fetchData();
             Swal.fire({
               title: "Applied ",
-              text: "applied successfully",
+              text: "Waiting for admin to approve",
               icon: "success",
               confirmButtonText: "OK",
             });
@@ -191,11 +184,7 @@ const Information = () => {
 
   useEffect(() => {
     fetchData()
-  }, [params.id])
-
-  // useEffect(() => {
-  //   handleDisabled()
-  // })
+  }, [params.id]);
 
   return (
     <html>
