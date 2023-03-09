@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
-import logo from "../image/logo1.png"
+import logo from "../image/logo2.png"
 import "./sign.css"
 
 const initialUser = { email: '', password: '', username: '' };

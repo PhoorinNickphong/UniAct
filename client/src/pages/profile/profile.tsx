@@ -10,21 +10,21 @@ function Profile() {
             rel="stylesheet"
         />
         <body>
-        <div className="box99">
+        <div className="box9999">
             <p>
             <label style={{fontSize: "200%"}}>My account</label>
             </p>  
         </div>
-        <div className="box2">
-            <div className="grid">
+        <div className="box999">
+            <div className="grid5">
                 <label>ชื่อ</label>
                 <label>นามสกุล</label>
-                <div className="box"></div>  
-                <div className="box"></div>
+                <div className="box888"></div>  
+                <div className="box888"></div>
                 <label>อีเมล</label>
                 <label>เบอร์โทร</label>
-                <div className="box"></div>
-                <div className="box"></div>
+                <div className="box888"></div>
+                <div className="box888"></div>
             </div>
         </div>
         <Footer/>

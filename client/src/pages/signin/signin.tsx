@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
 import { storeUser } from '../../helper';
-
+import logo from "../image/logo2.png"
 
 import "./sign.css"
 
@@ -58,6 +58,7 @@ function Signin() {
       </head>
       <body className='body1'>
           <section className="login" id="login">
+          <img className="pic" src={logo} alt="Logo" />
               <div className="head">
                   <h1 className="company">Login</h1>
               </div>
