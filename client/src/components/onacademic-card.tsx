@@ -33,7 +33,7 @@ function OnacademicCard() {
   }, []);
   return (<>
     {actv.map((kitjakum, index) => (
-      <Card sx={{ maxWidth: 345 }} onClick={() => navigate(`/information/${kitjakum.id}`)}>
+      <Card sx={{ maxWidth: 345, borderRadius: '20px'}} onClick={() => navigate(`/information/${kitjakum.id}`)}>
         <CardActionArea>
           <CardMedia
             component="img"

@@ -18,9 +18,7 @@ function Status() {
       </div>
       <div className="container-grid">
         <StatusCard></StatusCard>
-        <StatusCard></StatusCard>
-        <StatusCard></StatusCard>
-        <StatusCard></StatusCard>
+
       </div>
       <div>
       </div>

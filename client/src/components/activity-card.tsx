@@ -27,7 +27,7 @@ function ActivityCard() {
   }, []);
   return (<>
     {activityList.map((activity: kitjakum) => (
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, borderRadius: '20px'}}>
         <CardActionArea onClick={() => navigate(`/information/${activity.id}`)}>
           <CardMedia
             component="img"
