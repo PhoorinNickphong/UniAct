@@ -20,7 +20,6 @@ const Information = () => {
   const [activityresult, setActivityResult] = useState<kitjakum[]>([]);
   const navigate = useNavigate();
   const params = useParams();
-  const [isRegis, setIsRegis] = useState(false)
   const userData = getUserData();
   const data = userresult.length > 0 ? userresult[0].attributes : null;
   const thumbnail = `http://localhost:1337${data?.Image.data[0].attributes.url}`;
@@ -97,7 +96,7 @@ const Information = () => {
               confirmButtonText: "OK",
             });
 
-            setIsRegis(true);
+
           } catch (err) {
             console.error(err);
           }
@@ -163,7 +162,6 @@ const Information = () => {
               confirmButtonText: "OK",
             });
 
-            setIsRegis(true);
           } catch (err) {
             console.error(err);
           }

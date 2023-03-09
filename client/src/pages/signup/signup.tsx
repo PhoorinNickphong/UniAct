@@ -30,15 +30,6 @@ function Signup(){
       }}
 
       
-      //   if (!user.email || !/@(email\.psu\.ac\.th|psu\.ac\.th)$/.test(user.email)) {
-      //     Swal.fire({
-      //       icon: 'error',
-      //       title: 'ข้อมูลผิดพลาด',
-      //       text: 'กรุณากรอกอีเมลล์ PSU',
-      //   });
-      //   return;
-      // }
-
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setUser({
