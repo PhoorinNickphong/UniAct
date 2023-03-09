@@ -6,7 +6,12 @@
   align-items: center;
   background-image: url(../image/loginpage.jpg);
   background-size: cover;
-
+}
+.pic {
+  display: block;
+  margin: auto;
+  width: 175px;
+  height: auto;
 }
 .login {
   color: white;

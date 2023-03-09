@@ -192,17 +192,6 @@ function ActivityAppBar() {
               </Button>
             ))}
           </Box>
-          <Box className="Box-Search">
-            <Search className='text-search'>
-              <SearchIconWrapper >
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-             />
-            </Search>
-          </Box>
           {userData && (
             <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

@@ -1,0 +1,39 @@
+.box9999 {
+    background-color: #0045a4;
+    color: #ffffff;
+    font-size: 270%; 
+    font-family: "Kanit", sans-serif;
+    text-align: center;
+    padding: 1% 2%; 
+    border-radius: 20px; 
+    border: 20% solid #0045a4; 
+    margin: 3% 11% 2%; 
+    }
+    
+.box999 {
+    background-color: #CDD0D3;
+    padding: 2% 7%; 
+    border-radius: 20px; 
+    margin: 2% 7% 7% ;
+    }
+    
+.grid5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto;
+    gap: 3%; 
+    margin: 2% 0 3% 5%; 
+    }
+    
+.box888 {
+    background-color: #ffffff;
+    padding: 35px;
+    text-align: center;
+    margin: 9% 11% 2%; 
+    border-radius: 20px; 
+    }
+    
+label {
+    font-size: 2rem; 
+    font-family: "Kanit", sans-serif;
+    }

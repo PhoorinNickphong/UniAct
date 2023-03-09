@@ -11,7 +11,7 @@ import MainPageadmin from './pages/adminpage/mainadmin'
 import Page from './pages/adminpage/Checkpls'
 import Signout from './pages/signin/signout'
 import FormActAdmin from './pages/adminpage/FormAct'
-
+import Profile from './pages/profile/profile';
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         <Route path='/checkadmin' element ={<Page/>}/>
         <Route path='/signout' element ={<Signout/>}/>
         <Route path='/formact' element ={<FormActAdmin/>}/>
-
+        <Route path='/profile' element ={<Profile/>}/>
 
       </Routes>
     </BrowserRouter>
