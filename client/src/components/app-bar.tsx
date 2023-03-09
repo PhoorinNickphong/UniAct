@@ -20,7 +20,8 @@ import Link from "@mui/material/Link";
 import { useState,useEffect } from 'react';
 
 
-const pages: [string, string][] = [['Home', '/'], ['Status', '/status'], ['Contact', '/contact']]
+
+const pages: [string, string][] = [['Home', '/checkadmin'], ['Status', '/status'], ['Contact', '/contact']]
 const settings: [string, string][] = [['Account',''], ['Logout','/signout']];
 
 const getUserData = () => {

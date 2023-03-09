@@ -58,9 +58,7 @@ const Page = () => {
 
   return (
     <div>
-      {isAuthorized ? (
-        <h1>loading...</h1>
-      ) : ("") }
+      {isAuthorized ? ("") : ("") }
     </div>
   );
 };
