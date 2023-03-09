@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
-
+import logo from "../image/logo1.png"
 import "./sign.css"
 
 const initialUser = { email: '', password: '', username: '' };
@@ -61,6 +61,7 @@ function Signup(){
       </head>
       <body className='body1'>
           <section className="login" id="login">
+            <img className="pic" src={logo} alt="Logo" />
               <div className="head">
                   <h1 className="company">Register</h1>
               </div>

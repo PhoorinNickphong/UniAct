@@ -1,12 +1,18 @@
 .body1 {
   font-family: Assistant, sans-serif;
   display: flex;
-  min-height: 90vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url(../image/loginpage.jpg);
+  background-image: url(../image/login.png);
   background-size: cover;
 
+}
+.pic {
+  display: block;
+  margin: auto;
+  width: 175px;
+  height: auto;
 }
 .login {
   color: white;
